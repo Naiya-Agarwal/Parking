@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parking Application Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f3f6fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+    }
+
+    .form-container {
+      background: #fff;
+      padding: 25px 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 500px;
+      width: 100%;
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+      color: #444;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #bbb;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    .form-group-inline {
+      display: flex;
+      gap: 15px;
+    }
+
+    .form-group-inline .form-group {
+      flex: 1;
+    }
+
+    .btn {
+      width: 100%;
+      background: #4CAF50;
+      color: #fff;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #43a047;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Parking Application Form</h2>
+    <form>
+      <!-- Applicant Info -->
+      <div class="form-group">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" placeholder="Enter your full name" required>
+      </div>
+
+      <div class="form-group-inline">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" placeholder="Enter phone number" required>
+        </div>
+      </div>
+
+      <!-- Vehicle Info -->
+      <div class="form-group">
+        <label for="vehicleType">Vehicle Type</label>
+        <select id="vehicleType" required>
+          <option value="">-- Select Vehicle Type --</option>
+          <option value="car">Car</option>
+          <option value="bike">Bike</option>
+          <option value="truck">Truck</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="vehicleNo">Vehicle Number</label>
+        <input type="text" id="vehicleNo" placeholder="e.g. MH 12 AB 1234" required>
+      </div>
+
+      <!-- Parking Info -->
+      <div class="form-group-inline">
+        <div class="form-group">
+          <label for="slot">Preferred Slot</label>
+          <select id="slot" required>
+            <option value="">-- Select Slot --</option>
+            <option value="A1">A1</option>
+            <option value="A2">A2</option>
+            <option value="B1">B1</option>
+            <option value="B2">B2</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="duration">Parking Duration</label>
+          <select id="duration" required>
+            <option value="">-- Select Duration --</option>
+            <option value="1hour">1 Hour</option>
+            <option value="2hour">2 Hours</option>
+            <option value="halfday">Half Day</option>
+            <option value="fullday">Full Day</option>
+            <option value="monthly">Monthly</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Address -->
+      <div class="form-group">
+        <label for="address">Address</label>
+        <textarea id="address" placeholder="Enter your address"></textarea>
+      </div>
+
+      <!-- Submit -->
+      <button type="submit" class="btn">Submit Application</button>
+    </form>
+  </div>
+</body>
+</html>
