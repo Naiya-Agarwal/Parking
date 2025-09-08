@@ -36,7 +36,7 @@ Parking/
 
 1. Clone the repository:
 
-git clone https://github.com/your-username/parking-application-form.git
+git clone https://github.com/Naiya-Agarwal/parking-application-form.git
 cd parking-application-form
 
 
